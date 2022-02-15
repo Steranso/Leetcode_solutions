@@ -1,0 +1,4 @@
+Select email as Email from 
+(select email as Email, Count(email) as emailcount from person
+ group by email) as Email
+where emailcount>1
